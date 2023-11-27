@@ -1,0 +1,57 @@
+.modalBook {
+  position: absolute;
+  display: flex;
+  max-width: 700px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(30px);
+  padding: 30px;
+  gap: 20px;
+  text-shadow: 3px 3px 2px black;
+  animation: apearing 0.3s forwards;
+  z-index: 2000;
+}
+
+img {
+  max-width: 317px;
+}
+
+.modalBookInfo {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes apearing {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes disapearing {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+@media (max-width:921px) {
+  .modalBook {
+    top: 0;
+    right: 0;
+    max-width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 217px;
+  }
+}

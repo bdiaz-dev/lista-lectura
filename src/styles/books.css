@@ -1,0 +1,90 @@
+.book--active {
+  animation-name: book-active;
+  animation-duration: 2s;
+}
+
+.book img {
+  /* opacity: 1;
+  transition: opacity 0.5s; */
+  width: 130px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.book img:hover {
+  transform: scale(150%);
+  z-index: 100;
+}
+
+.book-info-container {
+  position: relative;
+  top: -150px;
+}
+
+.book-info {
+  background-color: #1a1a1a;
+  width: 125px;
+  position: absolute;
+  z-index: -5;
+  top: 0;
+}
+
+.book-info--active {
+  background-color: #1a1a1a;
+  width: 125px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: -140px;
+}
+
+.fa-bookmark {
+  position: absolute;
+  color: blue;
+  text-shadow: 2px 2px 2px yellow;
+  transform: translate(-3px, -3px);
+}
+
+@keyframes disapearing {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+@keyframes apearing {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes book-active {
+  0% {
+    /* position: absolute;
+    left: auto;
+    top: auto; */
+    /* top: 0; */
+    translate: 0;
+    background-color: rgba(128, 128, 128, 0);
+    width: initial;
+    height: initial;
+  }
+
+  25% {}
+
+  50% {}
+
+  70% {}
+
+  100% {}
+}

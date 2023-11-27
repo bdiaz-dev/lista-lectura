@@ -1,0 +1,27 @@
+.filtersContainer {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* max-height: 50px; */
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.filtersContainer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  gap: 10px;
+
+}
+
+label {
+  text-wrap: pretty;
+}
+
+#onListCheck {
+  transform: scale(1.5);
+}

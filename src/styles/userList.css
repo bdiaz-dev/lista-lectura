@@ -1,0 +1,97 @@
+.userListPositioner {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#userList {
+  right: 0;
+  bottom: -410px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  transition: bottom 0.3s;
+
+}
+
+/* .book {
+  position: relative;
+} */
+
+.userList--title {
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.357);
+  backdrop-filter: blur(20px);
+  padding: 15px;
+  line-height: 0.5em;
+  border-radius: 80px;
+  border: solid 2px white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.userList--title:hover {
+  background-color: rgba(0, 0, 255, 0.389);
+}
+
+#addedNotify {
+  z-index: -50;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  color: rgb(0, 251, 255);
+  text-shadow: 2px 2px 2px blue;
+  /* animation: addedNotify 2s; */
+}
+
+.userBooksContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  background-color: rgba(0, 0, 0, 0.428);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+div {
+  align-items: center;
+}
+
+/* .deleteButton {
+  background: 0;
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  padding: 5px;
+} */
+
+@keyframes addedNotify {
+
+  10% {
+    opacity: 1;
+    transform: translateY(-30px)
+  }
+
+  90% {
+    opacity: 1;
+
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-30px)
+  }
+
+}
