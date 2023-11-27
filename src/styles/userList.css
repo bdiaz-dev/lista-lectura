@@ -21,10 +21,6 @@
 
 }
 
-/* .book {
-  position: relative;
-} */
-
 .userList--title {
   margin-bottom: 40px;
   background-color: rgba(0, 0, 0, 0.357);
@@ -32,9 +28,19 @@
   padding: 15px;
   line-height: 0.5em;
   border-radius: 80px;
-  border: solid 2px white;
+  /* border: solid 2px white; */
   cursor: pointer;
   transition: background-color 0.2s;
+}
+
+.userList--length {
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.357);
+  backdrop-filter: blur(20px);
+  line-height: 1;
+  padding: 0 10px;
+  border-radius: 80px;
+  border: solid 0.5px white;
 }
 
 .userList--title:hover {
@@ -48,6 +54,7 @@
   opacity: 0;
   color: rgb(0, 251, 255);
   text-shadow: 2px 2px 2px blue;
+  font-size: 1.4em;
   /* animation: addedNotify 2s; */
 }
 
@@ -69,14 +76,6 @@ div {
   align-items: center;
 }
 
-/* .deleteButton {
-  background: 0;
-  position: absolute;
-  right: 3%;
-  top: 3%;
-  padding: 5px;
-} */
-
 @keyframes addedNotify {
 
   10% {
@@ -90,6 +89,7 @@ div {
   }
 
   100% {
+    z-index: -50;
     opacity: 0;
     transform: translateY(-30px)
   }

@@ -32,7 +32,7 @@ export function ModalBook () {
     const notify = document.getElementById('addedNotify')
     notify.style.animation = ''
     if (notify === undefined) return
-    notify.style.color = isOnList() ? 'red' : 'lightblue'
+    notify.style.color = isOnList() ? 'orange' : 'lightblue'
     notify.textContent = isOnList() ? `${bookToOpen.title} quitado.` : `${bookToOpen.title} añadido.`
     notify.style.animation = 'addedNotify 2s'
     notify.addEventListener('animationend', () => { notify.style.animation = '' })

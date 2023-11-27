@@ -1,4 +1,5 @@
 .filtersContainer {
+  font-size: 1.3em;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
@@ -7,6 +8,12 @@
   /* max-height: 50px; */
   gap: 40px;
   flex-wrap: wrap;
+  padding: 10px 20px;
+  text-shadow: 2px 2px 2px black;
+  /* background-color: black; */
+  /* backdrop-filter: blur(80px); */
+  backdrop-filter: blur(5px);
+  border-radius: 100px;
 }
 
 .filtersContainer div {
@@ -15,13 +22,24 @@
   justify-content: center;
   line-height: 0;
   gap: 10px;
+  /* padding: 10px 20px;
+  text-shadow: 2px 2px 2px black;
+
+  backdrop-filter: blur(20px);
+  border-radius: 100px; */
 
 }
+
 
 label {
   text-wrap: pretty;
 }
 
 #onListCheck {
-  transform: scale(1.5);
+  transform: scale(2);
+}
+
+#categorySelector {
+  margin-left: 15px;
+  transform: scale(1.3);
 }
