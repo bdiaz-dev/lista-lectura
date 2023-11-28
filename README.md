@@ -10,3 +10,5 @@ Funcionalidades:
 Por añadir:
 - mayor cantidad de filtros y ordenacion: por paginas, autores, orden alfabetico...
 - añadir filtros y ordenacion a la lista de lectura
+
+WEB: https://lista-lectura-brunodiaz.netlify.app/
