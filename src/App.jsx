@@ -1,3 +1,4 @@
+import { BrunoDiazSign } from './components/BrunoDiazSign'
 import { Filters } from './components/Filters'
 import { Library } from './components/Library'
 import { UserReadingList } from './components/UserReadingList'
@@ -7,6 +8,7 @@ export function App () {
   return (
     <>
       <h1>Editorial Dinav</h1>
+      <BrunoDiazSign />
       <Filters />
       <Library />
       <UserReadingList />

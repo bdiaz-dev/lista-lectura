@@ -15,8 +15,13 @@
 }
 
 .book img:hover {
-  transform: scale(150%);
   z-index: 100;
+  transform: scale(150%);
+}
+
+.fa-bookmark:has(+img:hover) {
+  z-index: 100;
+  transform: scale(150%) translate(-14px, -35px);
 }
 
 .book-info-container {
@@ -44,8 +49,12 @@
 .fa-bookmark {
   position: absolute;
   color: blue;
-  text-shadow: 2px 2px 2px yellow;
-  transform: translate(-3px, -3px);
+  /* text-shadow: 0 0 1px rgb(0, 0, 0); */
+  text-shadow: 4px 4px 1px rgb(0, 0, 0);
+  transform: translate(3px, -6px);
+  z-index: 50;
+  transition: transform 0.3s;
+
 }
 
 @keyframes disapearing {

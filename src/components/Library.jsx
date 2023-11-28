@@ -17,20 +17,23 @@ import { hide, show } from '../constants/cssAnimations'
 export function Library () {
   const { library } = useLibrary()
   const { isModal, setIsModal, setBookToOpen } = useModalStore()
-  const [miniBookHided, setMiniBookHided] = useState('')
+  const [miniBookHided, setMiniBookHided] = useState([])
 
   const handleOpenBook = (e, book) => {
     e.target.style.animation = hide
     setBookToOpen(book)
     setIsModal(true)
-    setMiniBookHided(e.target.id)
+    setMiniBookHided([...miniBookHided, e.target.id])
   }
 
   useEffect(() => {
     if (!isModal && miniBookHided) {
-      const img = document.getElementById(miniBookHided)
-      img.style.animation = show
-      setMiniBookHided('')
+      // const img = document.getElementById(miniBookHided)
+      miniBookHided.forEach((id) => {
+        const img = document.getElementById(id)
+        img.style.animation = show
+      })
+      setMiniBookHided([])
     }
   }, [isModal])
 

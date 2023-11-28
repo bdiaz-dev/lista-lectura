@@ -14,12 +14,11 @@ export function UserReadingList () {
   }
   useEffect(() => {
     const notify = document.getElementById('addedNotify')
-    console.log('opened: ' + opened)
     opened
       ? notify.style.top = '-290px'
       : notify.style.top = '0'
   }, [opened])
-
+  console.log(readingList)
   // const flecha = 'V'
   return (
     <aside className='userListPositioner'>

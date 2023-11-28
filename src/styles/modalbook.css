@@ -21,6 +21,19 @@ img {
   flex-direction: column;
 }
 
+.addButtonContainer {
+  position: relative;
+}
+
+#addedButtonNotify {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 0;
+  z-index: -50;
+}
+
 @keyframes apearing {
   0% {
     opacity: 0;
@@ -38,6 +51,26 @@ img {
 
   100% {
     opacity: 0;
+  }
+
+}
+
+@keyframes addedButtonNotify {
+
+  10% {
+    opacity: 1;
+    transform: translateX(95px)
+  }
+
+  90% {
+    opacity: 1;
+
+  }
+
+  100% {
+    z-index: -50;
+    opacity: 0;
+    transform: translateX(95px)
   }
 
 }

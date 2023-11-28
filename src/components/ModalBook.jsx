@@ -30,12 +30,16 @@ export function ModalBook () {
 
   const handleNotify = () => {
     const notify = document.getElementById('addedNotify')
+    const notifyBt = document.getElementById('addedButtonNotify')
     notify.style.animation = ''
     if (notify === undefined) return
     notify.style.color = isOnList() ? 'orange' : 'lightblue'
+    notifyBt.style.color = isOnList() ? 'orange' : 'lightblue'
     notify.textContent = isOnList() ? `${bookToOpen.title} quitado.` : `${bookToOpen.title} añadido.`
     notify.style.animation = 'addedNotify 2s'
+    notifyBt.style.animation = 'addedButtonNotify 2s'
     notify.addEventListener('animationend', () => { notify.style.animation = '' })
+    notifyBt.addEventListener('animationend', () => { notifyBt.style.animation = '' })
   }
 
   const isOnList = () => (index >= 0)
@@ -55,7 +59,15 @@ export function ModalBook () {
           <li>{bookToOpen.genre}</li>
           <li>ISBN: {bookToOpen.ISBN}</li>
         </ul>
-        <button onClick={handleAddToList}>{isOnList() ? 'Quitar' : 'Añadir'}</button>
+        <div className='addButtonContainer'>
+          <button
+            style={{ color: `${isOnList() ? 'red' : 'white'}` }}
+            onClick={handleAddToList}
+          >
+            {isOnList() ? 'Quitar' : 'Añadir'}
+          </button>
+          <h3 id='addedButtonNotify'>{(!isOnList()) ? 'Quitado' : '¡A la lista!'}</h3>
+        </div>
       </div>
 
     </article>
