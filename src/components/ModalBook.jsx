@@ -1,5 +1,5 @@
 // Styles
-import '../styles/modalBook.css'
+import '../styles/modalbook.css'
 
 // Components
 import { CloseButton } from './CloseButton'
